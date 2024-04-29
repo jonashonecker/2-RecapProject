@@ -1,7 +1,6 @@
 package com.github.jonashonecker.orders;
 
 import com.github.jonashonecker.products.Product;
-import com.github.jonashonecker.products.ProductRepo;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

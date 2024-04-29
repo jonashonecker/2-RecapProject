@@ -3,7 +3,9 @@ package com.github.jonashonecker.products;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
+
 import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,25 +21,25 @@ class ProductRepoTest {
         productRepo.add(new Product("jkl", new BigDecimal("3.99"), "DDD"));
     }
 
-   @AfterEach
-   void clearSetup() {
+    @AfterEach
+    void clearSetup() {
         productRepo = new ProductRepo();
-   }
-
-   @Test
-   void add_whenProductAddedThenProductIsInList(){
-        // GIVEN
-       Product newProduct = new Product("xxx", new BigDecimal("4.99"), "83U");
-
-       // WHEN
-       productRepo.add(newProduct);
-
-       // THEN
-       assertThat(productRepo.getAll()).contains(newProduct);
-   }
+    }
 
     @Test
-    void remove_whenProductRemovedThenProductIsNotInList(){
+    void add_whenProductAddedThenProductIsInList() {
+        // GIVEN
+        Product newProduct = new Product("xxx", new BigDecimal("4.99"), "83U");
+
+        // WHEN
+        productRepo.add(newProduct);
+
+        // THEN
+        assertThat(productRepo.getAll()).contains(newProduct);
+    }
+
+    @Test
+    void remove_whenProductRemovedThenProductIsNotInList() {
         // GIVEN
         Product newProduct = new Product("abc", new BigDecimal("0.99"), "AAA");
 
@@ -49,7 +51,7 @@ class ProductRepoTest {
     }
 
     @Test
-    void getAll_whenProductAddedThenProductIsInList(){
+    void getAll_whenProductAddedThenProductIsInList() {
         // GIVEN
         Product newProduct = new Product("xxx", new BigDecimal("4.99"), "83U");
 
