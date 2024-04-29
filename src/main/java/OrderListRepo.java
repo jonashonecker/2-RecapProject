@@ -16,9 +16,9 @@ public class OrderListRepo {
         return orderList;
     }
 
-    public Order getOrderById(String productID) {
+    public Order getOrderById(String orderId) {
         for (Order o : orderList) {
-            if (productID.equals(o.orderId())) {
+            if (orderId.equals(o.orderId())) {
                 return o;
             }
         }
