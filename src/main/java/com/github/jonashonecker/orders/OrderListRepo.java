@@ -1,22 +1,28 @@
+package com.github.jonashonecker.orders;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderListRepo {
+public class OrderListRepo implements OrderRepo{
     List<Order> orderList = new ArrayList<>();
 
-    public void addOrder(Order newOrder) {
+    @Override
+    public void add(Order newOrder) {
         orderList.add(newOrder);
     }
 
-    public void removeOrder(Order orderToRemove) {
+    @Override
+    public void remove(Order orderToRemove) {
         orderList.remove(orderToRemove);
     }
 
-    public List<Order> getAllOrders() {
+    @Override
+    public List<Order> getAll() {
         return orderList;
     }
 
-    public Order getOrderById(String orderId) {
+    @Override
+    public Order getSingleById(String orderId) {
         for (Order o : orderList) {
             if (orderId.equals(o.orderId())) {
                 return o;

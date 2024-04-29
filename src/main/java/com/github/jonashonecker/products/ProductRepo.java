@@ -1,22 +1,24 @@
+package com.github.jonashonecker.products;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepo {
     private List<Product> products = new ArrayList<>();
 
-    public void addProduct(Product newProduct) {
+    public void add(Product newProduct) {
         products.add(newProduct);
     }
 
-    public void removeProduct(Product productToRemove) {
+    public void remove(Product productToRemove) {
         products.remove(productToRemove);
     }
 
-    public List<Product> getAllProducts() {
+    public List<Product> getAll() {
         return products;
     }
 
-    public Product getProductById(String productId) {
+    public Product getSingleById(String productId) {
         for (Product p : products) {
             if (productId.equals(p.productId())) {
                 return p;
