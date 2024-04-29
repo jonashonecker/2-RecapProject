@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class orderMapRepo implements OrderRepo {
+public class OrderMapRepo implements OrderRepo {
     Map<String, Order> orderMap = new HashMap<>();
 
     @Override

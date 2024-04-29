@@ -21,7 +21,12 @@ public class ShopService {
         if (productToOrder == null) {
             System.out.println("The requested product does not exist, Sorry!");
         } else {
-            System.out.println("Your product has been found and can be ordered!");
+            orderRepo.add(newOrder);
+            System.out.println("Your product has been found and ordered!");
         }
+    }
+
+    public OrderRepo getOrderRepo() {
+        return orderRepo;
     }
 }
