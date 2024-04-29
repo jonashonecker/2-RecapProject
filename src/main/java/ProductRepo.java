@@ -16,9 +16,9 @@ public class ProductRepo {
         return products;
     }
 
-    public Product getProductById(String productID) {
+    public Product getProductById(String productId) {
         for (Product p : products) {
-            if (productID.equals(p.id())) {
+            if (productId.equals(p.productId())) {
                 return p;
             }
         }
